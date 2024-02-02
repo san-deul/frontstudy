@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <h2>연습4</h2>
+  <br>
+  <form action="search/search" method="get"enctype="multipart/form-data">
+
+    <label for="id" >아이디</label>
+    <input type="text" id="id" name="id" placeholder="아이디">
+    <button type="submit">중복확인</button> <br>
+
+    <label for="password">비밀번호</label>
+    <input type="password" id="password" name="password" placeholder="새 비밀번호"><br>
+    <label for="password2">비밀번호 확인</label>
+    <input type="password" id="password2" name="password2" placeholder="비밀번호 확인"><br>
+
+    <label for="email">이메일</label>
+    <input type="text"id="email" name="email" placeholder="이메일">
+    <span>@</span>
+    <input type="text" placeholder="직접 입력 가능" name="email" list="email2">
+    <datalist id="email2">
+      <option>gamil.com</option>
+      <option>naver.com</option>
+      <option>daum.net</option>
+    </datalist>
+
+    <fieldset>
+      <legend>성별</legend>
+    <input type="radio" name="gender" id="man"><label for="man">남자</label>
+    <input type="radio" name="gender" id="woman"><label for="woman">여자</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>관심</legend>
+      <input type="checkbox" id="interest1" name="interest"><label for="interest1">IT</label>
+      <input type="checkbox" id="interest2" name="interest"><label for="interest2">경영</label><br>
+      <input type="checkbox" id="interest3" name="interest"><label for="interest3">금융</label>
+      <input type="checkbox" id="interest4" name="interest"><label for="interest4">제조</label><br>
+      <input type="checkbox" id="interest5" name="interest"><label for="interest5">서비스</label>
+      <input type="checkbox" id="interest6" name="interest"><label for="interest6">기타</label>
+    </fieldset>
+
+    <label for="address">거주지</label>
+    <input type="text" name="" list="address" placeholder="선택하세요"></input>
+    <datalist id="address" >
+      <option>서울</option>
+      <option>경기</option>
+      <option>강원</option>
+    </datalist>
+    <br>
+    <label for="textarea">자기소개</label>
+    <textarea name="self-introduce" id="textarea" cols="200" rows="10" placeholder="200자 이내 간단히 작성"></textarea>
+    <br>
+
+    <label for="readme">이력서</label>
+    <input id="readme" type="file">
+    <br>
+    <label for="sub_date">제출일</label>
+    <input type="date"id="sub_date" name="sub_date">
+    <br>
+    <button type="submit">제출</button>
+    <button type="reset">다시 입력</button>
+
+  </form>
+
+  <h2>연습3</h2>
+  <form action="search/search" method="get">
+    <p>개인 정보 작성</p>
+    <label for="name" >이름</label>
+    <input type="text" id="name" name="name"><br>
+    <label for="mail">메일 주소</label>
+    <input type="email" id="mail" name="mail"><br>
+    <label for="tel">연락처</label>
+    <input type="text" id="tel" name="tel"><br>
+    <label for="blog">블로그/홈페이지</label>
+    <input type="text" id="blog" name="blog">
+
+    <button type="submit">제출하기</button>
+    <button type ="reset">다시작성</button>
+  </form>
+  
+  <h2>연습2</h2>
+  <form action="">
+    <label for="id">아이디</label>
+    <input type="text" id="id" name="id" placeholder="아이디">
+
+    <label for="pw">비밀번호</label>
+    <input type="password" id="pw" name="pw" placeholder="비밀번호">
+    <button type="submit">로그인</button>
+  </form>
+
+
+
+
+<p>------------------------------------------테이블연습</p>
+<h1>연습1</h1>
+<table border="1">
+  <tbody>
+    <tr>
+      <td rowspan="5">1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+    </tr>
+    <tr>
+     
+     <td rowspan="3">10</td> 
+     <td>11</td> 
+     <td>12</td> 
+     <td rowspan="2">13</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>17</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td colspan="5">19</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>연습2</h2>
+<table border="1">
+  <tr>
+    <td colspan="4">1</td>
+    <td rowspan="7">2</td>
+  </tr>
+  <tr>
+    <td rowspan="5">3</td>
+    <td rowspan="4">4</td>
+    <td colspan="2">5</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td rowspan="4">7</td>
+  </tr>
+  <tr>
+    <td>8</td>
+  </tr>
+  <tr>
+    <td>9</td>
+  </tr>
+  <tr>
+    <td colspan="2">10</td>
+  </tr>
+  <tr>
+    <td colspan="4">11</td>
+  </tr>
+</table>
+
+<h2>연습3</h2>
+<table border="1">
+  <tbody>
+    <tr>
+      <td>이름</td>
+      <td>나이</td>
+      <td>주소</td>
+    </tr>
+    <tr>
+      <td>홍길동</td>
+      <td>20세</td>
+      <td>서울시 마포구 노고산동</td>
+    </tr>
+    <tr>
+      <td>특기</td>
+      <td colspan="2">먹기</td>
+    </tr>
+    <tr>
+      <td rowspan="3">신체</td>
+    </tr>
+    <tr>
+      <td colspan="2">180.0cm</td>
+    </tr>
+    <tr>
+      <td colspan="2">83kg</td>
+    </tr>
+
+  </tbody>
+</table>
+
+<h2>연습4</h2>
+<table border="1">
+  <thead>
+    <tr>
+      <td>방이름</td>
+      <td>고객구분</td>
+      <td>정원</td>
+      <td>가격</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>콜로라도</td>
+      <td>여성전용</td>
+      <td rowspan="3">4인실</td>
+      <td rowspan="4">100,000원</td>
+    </tr>
+    <tr>
+      <td rowspan="2">아레나도</td>
+      <td>가족용</td>
+    </tr>
+    <tr>
+      <td>커플용</td>
+    </tr>
+    <tr>
+      <td>엘레나</td>
+      <td>커플전용</td>
+      <td>2인실</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="4">6월 15일까지 전 객실 50% 할인</td>
+    </tr>
+  </tfoot>
+</table>
+
+
+<br><br><br>
+
+
+<h3>연습</h3>
+
+<ul>
+  <li>운동
+    <ul type="circle">
+      <li >축구
+        <ul type="squre">
+          <li>공격수</li>
+          <li>수비수</li>
+          <li>골키퍼</li>
+        </ul>
+      </li>
+      <li>야구
+        <ul type="square">
+          <li>투수</li>
+          <li>포수</li>
+          <li>야수</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>-------</p>
+<ul style="list-style: none;">
+  <li>준비물
+    <ul type="square">
+      <li>김치</li>
+      <li>참치</li>
+    </ul>
+  </li>
+  <li>조리법
+    <ol type="1">
+      <li>물을 500cc넣고 끓인다.</li>
+      <li>김치를 넣는다.</li>
+      <li>참치를 넣는다.</li>
+    </ol>
+  </li>
+</ul>
+</body>
+</html>
