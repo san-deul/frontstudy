@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>입사지원서</title>
+  <link rel="stylesheet" href="../02_css/practice.css">
+  <style>
+    /* 문제. CSS 작업을 수행하시오. */
+    dd{margin:0;}
+    *{box-sizing: border-box;}
+    /*header*/
+    body{width:1024px;margin:20px auto;}
+    .header{width: 100%;height: 50px;line-height:50px;background:limegreen;border-right:20px solid gray; }
+    .header h1{color:white;margin-left:10px;}
+
+    /**/
+    .wrap{width: 100%;display: flex;justify-content:space-between; margin-top:20px;}
+    
+    /*left-wrap*/
+    .left-wrap{padding:20px 0;width: 27%;background: #e3e3e3;display:flex;flex-direction: row;flex-wrap: wrap;justify-content: center;;}
+    .left-wrap .picture{width: 80%;height:260px;background:url('../../assets/image/animal1.jpg');background-size:cover;}
+    
+    .left-info{width: 80%;}
+    .left-info dl dt{position:relative;padding-left:10px;margin-bottom:10px;font-weight:bold;}
+    .left-info dl dt::before{content:'▶'; position:absolute;left:-10px;}
+    .left-info dl dd{width: 100%;margin-bottom:50px;}
+
+    .left-wrap ul li{list-style:none;}
+    .right-wrap{width: 68%;border:1px solid gray;padding:20px 15px 100px 15px;}
+    .right-wrap .section{margin-bottom:25px;}
+    .right-wrap .section h1{border-bottom:4px solid darkcyan}
+    .right-wrap .section dl{padding-left:30px;}
+    .right-wrap .section dl dt{margin-top:20px;}
+    .right-wrap .section dl dt::before{content:'⊙';;}
+
+    .right-wrap .section dl dd{padding-left:100px;}
+
+    .right-wrap .section dl h4{margin:0;margin-top:6px;}
+    .right-wrap .section dl p{margin:0;margin-top:5px;}
+
+    
+
+    .right-wrap .section ul li{list-style: none;}
+    .right-wrap .section ul li::before{content:'○';margin-right:5px;}
+    
+  </style>
+</head>
+<body>
+  
+  <div class="header">
+    <h1>입사지원서</h1>
+  </div>
+
+  <div class="wrap">
+    <div class="left-wrap">
+      <div class="picture"></div>
+      <div class="left-info">
+        <dl>
+          <dt>생년월일</dt>
+          <dd>2000. 00. 00</dd>
+          <dt>이메일</dt>
+          <dd>email@email.com</dd>
+          <dt>연락처</dt>
+          <dd>010-0000-0000</dd>
+          <dt>주소</dt>
+          <dd>서울특별시 영등포구 여의도동<br>63빌딩</dd>
+          <dt>성별</dt>
+          <dd>
+            <ul>
+              <li><input type="radio" name="gender" id="man"><label for="man">남자</label></li>
+              <li><input type="radio" name="gender" id="woman"><label for="woman">여자</label></li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+    </div>
+    <div class="right-wrap">
+      <div class="section">
+        <h1>학력사항</h1>
+        <div class="line"></div>
+        <dl>
+          <dt>20.01 - 20.01</dt>
+          <dd>
+            <h4>oo 고등학교 졸업</h4>
+            <p>전공 / 소재지</p>
+          </dd>
+          <dt>20.01 - 20.01</dt>
+          <dd>
+            <h4>oo 대학교 졸업</h4>
+            <p>전공 / 학점 / 소재지</p>
+          </dd>
+        </dl>
+      </div>
+      <div class="section">
+        <h1>교육사항</h1>
+        <div class="line"></div>
+        <dl>
+          <dt>20.01 - 20.01</dt>
+          <dd>
+            <h4>oo 아카데미 수료</h4>
+            <p>과정 / 기간 / 소재지</p>
+          </dd>
+        </dl>
+      </div>
+      <div class="section">
+        <h1>경력사항</h1>
+        <div class="line"></div>
+        <dl>
+          <dt>20.01 - 20.01 (0년 0개월)</dt>
+          <dd>
+            <h4>(주) oo 솔루션</h4>
+            <p>상세업무</p>
+          </dd>
+          <dt>20.01 - 20.01 (0년 0개월)</dt>
+          <dd>
+            <h4>(주) oo 소프트</h4>
+            <p>상세업무</p>
+          </dd>
+        </dl>
+      </div>
+      <div class="section">
+        <h1>직무관련 자격증</h1>
+        <div class="line"></div>
+        <ul>
+          <li>20.01 / <strong>oo 자격증</strong> / 발급기관</li>
+          <li>20.01 / <strong>oo 자격증</strong> / 발급기관</li>
+          <li>20.01 / <strong>oo 자격증</strong> / 발급기관</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <br><br>
+  <br>
+
+  <style>
+    .menu{display:inline-block;background: orange;}
+    .menu a{display:block;padding:0 16px;text-decoration: none;color:#000;
+    font-weight: 900;width: 100%;height: 100%;background: skyblue;}
+  </style>
+  <div class="menu"><a href="#">메뉴1</a></div>
+
+
+</body>
+</html>
