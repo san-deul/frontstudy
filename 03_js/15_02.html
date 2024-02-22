@@ -181,14 +181,16 @@
         
         var resData = xhr.responseXML;
         var result = '<div>';
-        result += '<div>id:' + resData.getElementsByTagName('id')[0].textContent; + '</div>';
-        result += '<div>id_type:' + resData.getElementsByTagName('id')[0].getAttribute('type')+'</div>'
-        result += '<div>name:'+resData.getElementsByTagName('name')[0].textContent + '</div>';
-        result += '<div><img src = "' + resData.getElementsByTagName('avatar')[0].textContent + '"></div>';
-        result += '<div>created at : '+ resData.getElementsByTagName('created-at')[0].textContent + '</div>';
-        result += '<div>updated at : ' + resData.getElementsByTagName('updated-at')[0].textContent + '</div>'; 
-        result +='</div>';
+          result += '<div>id:' + resData.getElementsByTagName('id')[0].textContent; + '</div>';
+          result += '<div>id_type:' + resData.getElementsByTagName('id')[0].getAttribute('type')+'</div>'
+          result += '<div>name:'+resData.getElementsByTagName('name')[0].textContent + '</div>';
+          result += '<div><img src = "' + resData.getElementsByTagName('avatar')[0].textContent + '"></div>';
+          result += '<div>created at : '+ resData.getElementsByTagName('created-at')[0].textContent + '</div>';
+          result += '<div>updated at : ' + resData.getElementsByTagName('updated-at')[0].textContent + '</div>'; 
+          result +='</div>';
+          
         document.getElementById('contents3').innerHTML =result;
+
       }
     }
 
@@ -257,6 +259,7 @@
           result += ' <div>updated-at:' + objects[i].getElementsByTagName('updated-at')[0].textContent + '</div>';
           result += ' <div><img src = "' + objects[i].getElementsByTagName('avatar')[0].textContent + '"width=150px"></div>';
           result += ' </div>';
+
         }
         document.getElementById('contents4').innerHTML = result;
 
