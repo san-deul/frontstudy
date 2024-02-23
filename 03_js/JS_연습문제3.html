@@ -17,7 +17,21 @@
       light1.png, light2.png 이미지를 교환하고
       btn1의 ON, OFF 텍스트를 교환하시오.
     */
-   document.querySelector('#div1').addEventListener('click',function(){
+
+    document.getElementById('btn1').onclick = function(evt){
+      var img = document.querySelector('#div1 img');
+      if(evt.target.textContent === 'ON'){
+        img.src = '../../assets/image/light2.png';
+        evt.target.textContent = 'OFF';
+      }else{
+        img.src = '../../assets/image/light1.png';
+        evt.target.textContent = 'ON';
+      }
+    }
+
+
+    /*
+   document.querySelector('#btn1').addEventListener('click',function(){
     var img = document.querySelector('#div1 img');
     var button = document.querySelector('#div1 #btn1');
 
@@ -30,7 +44,7 @@
       button.textContent = 'ON';
     }
    })
-
+*/
   </script>
 
   <hr>
@@ -39,7 +53,7 @@
     <div id="img-slide">
       <button id="btn-prev" type="button">이전</button>
       <span id="img-no">1 / 10</span>
-      <button id="btn-next" type="button">이전</button>
+      <button id="btn-next" type="button">다음</button>
     </div>
     <div id="img-container"></div>
   </div>
@@ -67,6 +81,62 @@
   <script>
     /* animal1.jpg ~ animal10.jpg 를 이용하여 이미지 슬라이드를 만드시오. */
 
+    var img_no = document.getElementById('img-no');
+    var img_container = document.getElementById('img-container');
+    var btn_prev = document.getElementById('btn-prev');
+    var btn_next = document.getElementById('btn-next');
+
+
+
+    var slide_no = 1; 
+    function change_img(number){
+      slide_no += number;
+
+      if(slide_no > 10) slide_no = 1;
+      if(slide_no < 1) slide_no = 10;
+      
+      img_container.style.backgroundImage = 'url(../../assets/image/animal'+slide_no+'.jpg)';
+      img_no.textContent = slide_no + ' / 10';
+    }
+
+
+    /*
+    var numberTotal= 0;
+    function change_img(number){
+      if(number==1){
+      numberTotal += number;
+      console.log(numberTotal)
+      var url = `url('../../assets/image/animal${numberTotal}.jpg')`
+     img_container.style.backgroundImage = url;
+      }
+
+      if(number==-1){
+      var numberTotal=10
+      numberTotal += number;
+      console.log(numberTotal)
+      var url = `url('../../assets/image/animal${numberTotal}.jpg')`
+     img_container.style.backgroundImage = url;
+     console.log(url);
+      }
+
+
+     if(numberTotal == 10){
+      numberTotal =0;
+      return;
+     }
+     if(numberTotal==0){
+      numberTotal=10;
+      return;
+     }
+
+    }
+*/
+    btn_prev.onclick = function(){change_img(-1);}
+    btn_next.onclick = function(){change_img(1);}
+
+    
+  
+
   </script>
 
   <hr>
@@ -74,11 +144,11 @@
   <div id="div3">
     <div id="original-image"></div>
     <div id="thumbnail-images">
-      <div style="background-image: url('../../assets/image/architecture1.jpg');"></div>
-      <div style="background-image: url('../../assets/image/architecture2.jpg');"></div>
-      <div style="background-image: url('../../assets/image/architecture3.jpg');"></div>
-      <div style="background-image: url('../../assets/image/architecture4.jpg');"></div>
-      <div style="background-image: url('../../assets/image/architecture5.jpg');"></div>
+      <div data-file-name="architecture1.jpg" style="background-image: url('../../assets/image/architecture1.jpg');"></div>
+      <div data-file-name="architecture2.jpg" style="background-image: url('../../assets/image/architecture2.jpg');"></div>
+      <div data-file-name="architecture3.jpg" style="background-image: url('../../assets/image/architecture3.jpg');"></div>
+      <div data-file-name="architecture4.jpg" style="background-image: url('../../assets/image/architecture4.jpg');"></div>
+      <div data-file-name="architecture5.jpg" style="background-image: url('../../assets/image/architecture5.jpg');"></div>
     </div>
   </div>
   <style>
@@ -112,6 +182,20 @@
   <script>
     /* 5개 thumbnail 이미지에 마우스를 가져다대면 해당 이미지를 original-image로 표시하시오. */
     
+    var original_image = document.getElementById('original-image');
+    var thumbnail_images = document.querySelectorAll('#thumbnail-images > div');
+
+    for(var i=0;i<thumbnail_images.length; i++){
+      thumbnail_images[i].onmouseover = function(evt){
+        original_image.style.backgroundImage = 'url(../../assets/image/'+evt.target.dataset.fileName+')';
+        evt.target.style.border = '5px solid orange';
+      }
+      thumbnail_images[i].onmouseout = function(evt){
+        evt.target.style.border = '5px solid rgba(0, 0, 0, 0)';
+      }
+    }
+
+
   </script>
 
   <hr>
